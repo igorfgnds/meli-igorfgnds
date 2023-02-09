@@ -1,0 +1,33 @@
+/* 
+ * Button
+ */
+
+@import '@/theme/variables.module';
+@import '@/theme/mixins.module';
+
+.button {
+  width: 100%;
+  cursor: pointer;
+  font-weight: 600;
+  border-radius: $radius;
+  transition: $transition;
+  padding: $spacer calc($spacer * 2);
+
+  &--primary {
+    color: $white;
+    background-color: $secondaryColor;
+  
+    &:hover {
+      background-color: darken($secondaryColor, 10%);
+    }
+  }
+  
+  &--secondary {
+    color: $secondaryColor;
+    background-color: lighten($secondaryColor, 35%);
+  
+    &:hover {
+      background-color: lighten($secondaryColor, 32%);
+    }
+  }
+}

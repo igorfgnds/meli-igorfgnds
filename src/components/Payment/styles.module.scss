@@ -1,0 +1,43 @@
+/* 
+ * Payment
+ */
+
+@import '@/theme/variables.module';
+@import '@/theme/mixins.module';
+
+.payment {
+  display: none;
+  position: relative;
+  margin-bottom: calc($spacer * 3);
+  justify-content: space-evenly;
+
+  &:before {
+    content: '';
+    position: absolute;
+    top: calc($spacer / 4);
+    left: calc($spacer / 4);
+    width: calc($spacer / 4);
+    bottom: calc($spacer / 4);
+    background-color: $secondaryColor;
+  }
+
+  @include breakpoint('desktop') {
+    display: flex;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+  
+    &:not(&:first-of-type) {
+      gap: $spacer;
+    }
+  }
+  
+  &__mp {
+    strong {
+      font-weight: 600;
+      color: $secondaryColor;
+    }
+  }
+}

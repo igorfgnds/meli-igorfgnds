@@ -1,0 +1,15 @@
+/* 
+ * Footer
+ */
+
+@import '@/theme/variables.module';
+
+.footer {
+  text-align: center;
+  font-size: $fontSizeXs;
+  padding: calc($spacer * 2) 0;
+
+  a {
+    font-weight: 600;
+  }
+}

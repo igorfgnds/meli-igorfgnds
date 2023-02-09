@@ -1,0 +1,17 @@
+/* 
+ * Card List
+ */
+
+@import '@/theme/variables.module';
+@import '@/theme/mixins.module';
+
+.cardlist {
+  margin-bottom: $spacer;
+
+  @include breakpoint('desktop') {
+    gap: $spacer;
+    display: flex;
+    margin-bottom: calc($spacer * 3);
+    justify-content: space-between;
+  }
+}

@@ -1,0 +1,11 @@
+/*
+ * Empty
+ */
+
+@import '@/theme/variables.module';
+
+.empty {
+  text-align: center;
+  font-size: $fontSizeMd;
+  margin: calc($spacer * 4) 0;
+}

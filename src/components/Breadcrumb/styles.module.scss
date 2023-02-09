@@ -1,0 +1,28 @@
+/* 
+ * Breadcrumb
+ */
+
+@import '@/theme/variables.module';
+@import '@/theme/mixins.module';
+
+.breadcrumb {
+  padding: $spacer 0 calc($spacer / 2);
+  font-size: $fontSizeXs;
+
+  @include breakpoint('desktop') {
+    font-size: $fontSizeSm;
+    padding: calc($spacer * 2) 0 $spacer;
+  }
+
+  li:last-of-type {
+    svg {
+      display: none;
+    }
+  }
+
+  svg {
+    fill: none;
+    stroke: $iconColor;
+    margin: 0 calc($spacer / 2);
+  }
+}

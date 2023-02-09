@@ -1,0 +1,22 @@
+/* 
+ * Header
+ */
+
+@import '@/theme/variables.module';
+
+.header {
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1000;
+  position: fixed;
+  padding: $spacer 0;
+  background-color: $primaryColor;
+  box-shadow: 0 1px 0 0 rgba($black, 10%);
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+  }
+}

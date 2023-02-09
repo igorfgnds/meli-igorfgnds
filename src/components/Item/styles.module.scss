@@ -1,0 +1,84 @@
+/* 
+ * Item
+ */
+
+@import '@/theme/variables.module';
+@import '@/theme/mixins.module';
+
+.item {
+  display: flex;
+  padding: $spacer;
+  color: $textColor;
+  position: relative;
+  border-radius: $radius;
+
+  &:not(&:last-of-type) {
+    border-bottom: 1px solid $gray200;
+  }
+
+  @include breakpoint('desktop') {
+    padding: calc($spacer * 2);
+  }
+
+  &:hover {
+    color: $black;
+  }
+
+  &__picture {
+    margin-right: $spacer;
+  
+    @include breakpoint('desktop') {
+      margin-right: calc($spacer * 2);
+    }
+  }
+  
+  &__details {
+    width: 100%;
+  
+    @include breakpoint('desktop') {
+      padding-right: 0 calc($spacer * 2);
+    }
+  }
+  
+  &__price {
+    display: block;
+    font-size: $fontSizeMd;
+    margin-bottom: calc($spacer / 2);
+  
+    @include breakpoint('desktop') {
+      font-size: $fontSizeLg;
+      margin-bottom: $spacer;
+    }
+  }
+  
+  &__title {
+    font-weight: 300;
+    font-size: $fontSizeSm;
+    overflow: hidden;
+    display: -webkit-box;
+    text-overflow: ellipsis;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    margin-bottom: calc($spacer / 2);
+  
+    @include breakpoint('desktop') {
+      font-size: $fontSizeMd;
+      margin-bottom: $spacer;
+    }
+  }
+  
+  &__shipping {
+    margin-right: calc($spacer / 2);
+  }
+  
+  &__condition {
+    margin-top: calc($spacer / 2);
+  
+    @include breakpoint('desktop') {
+      margin-top: 0;
+      position: absolute;
+      top: calc($spacer * 2);
+      right: calc($spacer * 2);
+    }
+  }
+}

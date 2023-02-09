@@ -1,0 +1,37 @@
+/*
+ * Logo
+ */
+
+@import '@/theme/variables.module';
+@import '@/theme/mixins.module';
+
+$logo-small-width: 40px;
+$logo-small-height: 28px;
+
+$logo-large-width: 135px;
+$logo-large-height: 35px;
+
+.logo {
+  margin-right: $spacer;
+  height: $logo-small-height;
+
+  @include breakpoint('desktop') {
+    height: $logo-large-height;
+  }
+
+  a {
+    width: $logo-small-width;
+    height: $logo-small-height;
+    text-indent: -99999px;
+    display: inline-block;
+    transition: $transition;
+    background-repeat: no-repeat;
+    background-image: url('/logo-small.svg');
+    
+    @include breakpoint('desktop') {
+      width: $logo-large-width;
+      height: $logo-large-height;
+      background-image: url('/logo-large.svg');
+    }
+  }
+}

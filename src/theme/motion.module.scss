@@ -1,0 +1,19 @@
+/* 
+ * Motion
+ */
+
+@import 'variables.module';
+
+// Fade In
+.fadein {
+  animation: fadeIn $transition;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

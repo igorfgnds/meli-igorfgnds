@@ -1,0 +1,48 @@
+/*
+ * Variables
+ */
+
+// Colors
+$primaryColor:   #FFF159;
+$secondaryColor: #3483FA;
+
+$black: #000000;
+$white: #FFFFFF;
+
+$gray200: #E7E7E7;
+$gray500: #555555;
+
+$success: #00A650;
+
+$bgColor: #EDEDED;
+
+$textColor: rgba($black, 70%);
+
+$iconColor: #999999;
+
+
+// Size Default
+$size: 1rem;
+
+// Spacing Default
+$spacer: $size;
+
+// Font
+$fontFamily: 'Montserrat', sans-serif;
+
+$fontSizeXs: 0.75rem;
+$fontSizeSm: 0.875rem;
+$fontSizeMd: 1rem;
+$fontSizeLg: 1.5rem;
+$fontSizeXl: 2rem;
+
+// Border
+$radius: calc($size / 4);
+
+// Transition
+$transition: 200ms;
+
+// Breakpoints
+$breakpoints: (
+  'desktop': ( min-width: 767px ),
+) !default;

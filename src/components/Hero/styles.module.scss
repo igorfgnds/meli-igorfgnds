@@ -1,0 +1,31 @@
+/* 
+ * Hero
+ */
+
+@import '@/theme/variables.module';
+@import '@/theme/mixins.module';
+
+.hero {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto calc($spacer * 3);
+
+  img {
+    height: auto;
+    max-width: 100%;
+  }
+
+  &--desktop {
+    display: none;
+  }
+
+  @include breakpoint('desktop') {
+    &--desktop {
+      display: block;
+    }
+
+    &--mobile {
+      display: none;
+    }
+  }
+}

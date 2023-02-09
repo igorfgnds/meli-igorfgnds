@@ -1,0 +1,93 @@
+/* 
+ * Details
+ */
+
+@import '@/theme/variables.module';
+@import '@/theme/mixins.module';
+
+.details {
+  &__content {
+    margin-bottom: calc($spacer * 2);
+
+    @include breakpoint('desktop') {
+      display: flex;
+      margin-bottom: calc($spacer * 4);
+    }
+  }
+
+  &__pictures {
+    width: 100%;
+    margin-bottom: calc($spacer * 3);
+
+    @include breakpoint('desktop') {
+      margin-right: calc($spacer * 3);
+    }
+  }
+
+  &__infos {
+    width: 100%;
+
+    @include breakpoint('desktop') {
+      max-width: 350px;
+    }
+  }
+
+  &__shipping {
+    margin-right: calc($spacer / 2);
+  }
+
+  &__sold {
+    margin-left: $spacer;
+  }
+
+  &__title {
+    margin: $spacer 0;
+    font-weight: 600;
+    font-size: $fontSizeMd;
+
+    @include breakpoint('desktop') {
+      font-size: $fontSizeLg;
+    }
+  }
+
+  &__price {
+    display: block;
+    font-weight: 300;
+    font-size: $fontSizeLg;
+    margin-bottom: $spacer;
+
+    @include breakpoint('desktop') {
+      font-size: $fontSizeXl;
+      margin-bottom: calc($spacer * 2);
+    }
+  }
+
+  &__description {
+    @include breakpoint('desktop') {
+      width: calc(100% - 400px);
+    }
+
+    h2 {
+      font-size: $fontSizeMd;
+      margin-bottom: $spacer;
+      
+      @include breakpoint('desktop') {
+        font-size: $fontSizeLg;
+      }
+    }
+    
+    p {
+      line-height: 1.5;
+      white-space: pre-line;
+      font-size: $fontSizeMd;
+    }
+  }
+
+  &__buttons {
+    button {
+      &:first-of-type {
+        margin-bottom: calc($spacer / 2);
+      }
+    }
+  }
+}

@@ -1,0 +1,80 @@
+/* 
+ * Gallery
+ */
+
+@import '@/theme/variables.module';
+@import '@/theme/mixins.module';
+
+$gallery-sm: 250px;
+$gallery-lg: 360px;
+
+@mixin gallery-size {
+  width: 100%;
+  height: $gallery-sm;
+
+  @include breakpoint('desktop') {
+    height: $gallery-lg;
+  }
+}
+
+.gallery {
+  @include gallery-size;
+
+  :global(.carousel-slider) {
+    overflow: initial;
+  }
+
+  :global(.control-dots) {
+    margin: 0;
+    bottom: -30px;
+  }
+
+  :global(.control-dots .dot) {
+    opacity: 1;
+    width: 6px;
+    height: 6px;
+    box-shadow: none;
+    transition: $transition;
+    background-color: transparent;
+    border: 1px solid $secondaryColor;
+  }
+
+  @include breakpoint('desktop') {
+    :global(.control-dots .dot) {
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  :global(.control-dots .selected) {
+    background-color: $secondaryColor;
+  }
+
+  :global(.control-arrow) {
+    display: none;
+  }
+
+  @include breakpoint('desktop') {
+    :global(.control-arrow) {
+      display: block;
+      top: 50% !important;
+      opacity: .1 !important;
+      width: calc($spacer * 3);
+      height: calc($spacer * 3);
+      border-radius: $radius;
+      transform: translateY(-50%);
+      background-color: $black !important;
+
+      &:hover {
+        opacity: .2 !important;
+      }
+    }
+  }
+
+  &__item {
+    @include gallery-size;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+}

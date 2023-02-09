@@ -1,0 +1,23 @@
+/* 
+ * Badge
+ */
+
+@import '@/theme/variables.module';
+
+.badge {
+  font-weight: 600;
+  font-size: $fontSizeXs;
+  border-radius: $radius;
+  display: inline-block;
+  padding: calc($spacer / 3) calc($spacer / 2);
+
+  &--secondary {
+    color: $secondaryColor;
+    background-color: lighten($secondaryColor, 35%);
+  }
+  
+  &--success {
+    color: $success;
+    background-color: lighten($success, 60%);
+  }
+}

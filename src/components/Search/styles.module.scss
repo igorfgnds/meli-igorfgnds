@@ -1,0 +1,68 @@
+/*
+ * Search
+ */
+
+@import '@/theme/variables.module';
+@import '@/theme/mixins.module';
+
+$button-width: 50px;
+
+@mixin hover-shadow {
+  box-shadow: 0 2px 5px 0 rgba($black, 20%);
+}
+
+.search {
+  width: 100%;
+  height: calc($size * 2);
+  display: flex;
+  position: relative;
+  transition: $transition;
+
+  @include breakpoint('desktop') {
+    height: calc($size * 3);
+  }
+
+  &:hover {
+    input {
+      @include hover-shadow;
+    }
+  }
+
+  &__field {
+    width: 100%;
+    border-radius: $radius;
+    transition: $transition;
+    box-shadow: 0 1px 2px 0 rgba($black, 20%);
+    padding: 0 calc($button-width + $spacer) 0 $spacer;
+  
+    &:focus {
+      @include hover-shadow;
+    }
+  }
+  
+  &__button {
+    right: 0;
+    position: absolute;
+    width: $button-width;
+    height: 100%;
+    cursor: pointer;
+    border-radius: $radius;
+    background-color: $white;
+  }
+  
+  &__icon {
+    height: $size;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-left: 1px solid $gray200;
+  
+    @include breakpoint('desktop') {
+      height: calc($size * 2);
+    }
+  
+    svg {
+      fill: $iconColor;
+    }
+  }
+}

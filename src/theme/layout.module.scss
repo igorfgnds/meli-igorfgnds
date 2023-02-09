@@ -1,0 +1,20 @@
+/* 
+ * Layout
+ */
+
+@import 'variables.module';
+@import 'mixins.module';
+
+.main {
+  padding-top: 64px;
+
+  @include breakpoint('desktop') {
+    padding-top: 80px;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 $spacer;
+  max-width: 1200px;
+}
