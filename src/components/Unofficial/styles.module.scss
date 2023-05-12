@@ -1,0 +1,19 @@
+/* 
+ * Unofficial
+ */
+
+@import '@/theme/variables.module';
+
+.unofficial {
+  top: 50px;
+  left: -110px;
+  width: 400px;
+  z-index: 9999;
+  color: $white;
+  position: fixed;
+  font-weight: 600;
+  padding: $spacer 0;
+  text-align: center;
+  background-color: $secondaryColor;
+  transform: rotate(320deg);
+}
